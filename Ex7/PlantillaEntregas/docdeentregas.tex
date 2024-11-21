@@ -1,0 +1,88 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}  
+\usepackage[catalan]{babel} 
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}        
+\usepackage{geometry}        
+\geometry{margin=1in}        
+\usepackage{fancyhdr}        
+\usepackage{hyperref}        
+\usepackage{enumitem}     
+\usepackage{tocloft}         
+\usepackage{cite}            
+\usepackage{xcolor}          
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Mòdul: }
+\fancyhead[R]{Nom: }
+\fancyfoot[L]{Centre: }
+\fancyfoot[L]{Data: }
+
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\today}
+
+\newcommand{\titol}{Títol de la Pràctica}
+\newcommand{\nomestudiant}{Nom i Cognoms}
+\newcommand{\assignatura}{Nom de l'Assignatura}
+\newcommand{\professor}{Nom del Professor}
+\newcommand{\universitat}{Nom del centre}
+\newcommand{\departament}{Nom del Departament}
+\newcommand{\data}{\today}
+
+
+\begin{document}
+
+
+\begin{titlepage}
+    \centering
+    {\scshape\Large \universitat \par}
+    {\large \departament \par}
+    \vspace{2cm}
+    {\Huge\bfseries \titol \par}
+    \vspace{1cm}
+    \textbf{Assignatura:} \assignatura \par
+    \textbf{Professor:} \professor \par
+    \vspace{1.5cm}
+    \textbf{Realitzat per:} \nomestudiant \par
+    \textbf{Data:} \data \par
+    \vfill
+    {\large \universitat, \data \par}
+\end{titlepage}
+
+
+\newpage
+\tableofcontents
+\newpage
+
+
+\section{Introducció}
+Una breu introducció sobre la pràctica, els objectius i el contingut.
+
+\section{Desenvolupament}
+\subsection{Metodologia}
+Descriu la metodologia seguida per resoldre la pràctica.
+\subsection{Resultats}
+Presenta els resultats obtinguts (amb taules, gràfics o imatges si cal).
+
+\section{Discussió}
+Analitza els resultats, dificultats trobades i possibles millores.
+
+\section{Conclusions}
+Resumeix els punts clau de la pràctica i les conclusions principals.
+
+\section{Bibliografia}
+Utilitza el format de bibliografia adequat (APA, IEEE, etc.). Exemple:
+\begin{thebibliography}{9}
+    \bibitem{referencia1} Autor, Títol, Editorial, Any.
+    \bibitem{referencia2} Autor, Títol, \textit{Journal}, Volum(Nombre), Pàgines, Any.
+\end{thebibliography}
+
+
+\appendix
+\section{Codi Font}
+Inclou codi o informació addicional aquí si cal.
+
+\end{document}
