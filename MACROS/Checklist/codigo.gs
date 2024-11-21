@@ -10,5 +10,32 @@ function enviar(){
  var salt = "\n";
  var pepe = "Hola al·lots,"+salt+Missatge; 
  var contingut = pepe+salt+"Per favor relleneu-la. Gràcies.";
- MailApp.sendEmail("alumnatsmxa@iesjoanramis.org","Alumnat 1r SMX: "+Assumpte, contingut, {attachments: [myFiles]});
+
+  var IDCalc =  "1SFtJyfJM2h10yyTqQf6SE61V_xbc34EzXZxfOsj7GQ0" 
+
+ // Obtenim el full de càlcul amb els correus electrònics
+
+ var ss = SpreadsheetApp.openById(IDCalc).getSheetByName("Full 1");  // Obtenir el full de càlcul actiu
+
+ var data = ss.getDataRange().getValues();  // Agafem la columna A amb els correus (ajusta si està en una altra columna)
+
+  // Recorrem la llista de correus i enviem el correu a cada un
+
+ for (var i = 1; i < data.length; i++) {
+
+   var email = data[i][0];  // Cada correu de la columna A
+
+   var name = data[i][1];
+
+
+
+   if (email) {  // Si el correu no és buit
+
+     MailApp.sendEmail(email, "Alumnat 1r SMX: " + "checklist" + name, contingut, {attachments: [myFiles]});
+
+   }
+
+ }
 }
+
+
